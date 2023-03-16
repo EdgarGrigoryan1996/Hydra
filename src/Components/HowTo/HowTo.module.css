@@ -1,0 +1,52 @@
+.howTo{
+    width: 100%;
+    background-color: #343045;
+    margin-top: 123px;
+}
+
+.howToItems{
+    margin-top: 119px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-image: url("../../assets/images/vector4.png");
+    background-repeat: no-repeat;
+    background-position: 100px 30px;
+}
+.itemBlock{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.wrapper{
+    width: 198px;
+    height: 198px;
+    border-radius: 50%;
+    background: rgba(13, 13, 13, 0.32);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.background{
+    width: 159px;
+    height: 159px;
+    border-radius: 50%;
+    background: linear-gradient(251.27deg, #C0B7E8 12.87%, #8176AF 89.33%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 64px;
+    color:#343045;
+    font-weight: 900;
+}
+.itemTitleBlock{
+    margin-top: 25px;
+    display: flex;
+    align-items: flex-start;
+    color: white;
+    font-size: 24px;
+    margin-bottom: 112px;
+}
+.itemTitleBlock img{
+    margin-right: 15px;
+}

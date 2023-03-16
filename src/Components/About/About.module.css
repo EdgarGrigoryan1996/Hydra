@@ -1,0 +1,32 @@
+.about{
+    margin-top: 105px;
+    width: 100%;
+    background-color: #343045;
+    color: #fff;
+}
+/* Content */
+.aboutContent{
+    margin-top: 97px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    background-image: url("../../assets/images/vector2.png");
+    background-repeat: no-repeat;
+}
+.contentTitle h2{
+    font-size: 36px;
+    font-weight: 900;
+}
+.contentTitle h3{
+    font-size: 36px;
+    font-weight: 100;
+}
+.content p{
+    margin-top: 42px;
+    margin-bottom: 28px;
+    max-width: 630px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 25px;
+}

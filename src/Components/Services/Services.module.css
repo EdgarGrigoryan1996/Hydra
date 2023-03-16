@@ -1,0 +1,49 @@
+.services{
+    width: 100%;
+    background-color: #343045;
+    margin-top: 100px;
+    position: relative;
+    overflow: visible;
+    z-index: 88;
+}
+.vector{
+    width: 100%;
+    top: 200px;
+    position: absolute;
+    z-index: -1;
+}
+/* Service */
+.servicesBlock{
+    margin-top: 74px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.service{
+    width: 320px;
+    border-radius: 40px;
+    background: radial-gradient(50% 50% at 50% 50%, #433D60 0%, #211E2E 100%);
+    padding: 38px 33px 40px 33px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color:#fff;
+}
+.serviceImg{
+    margin-bottom: 21px;
+}
+.serviceImg img{
+    border-radius: 50%;
+    border:10px solid rgba(14, 14, 14, 0.32);
+}
+.serviceTitle h2{
+    padding-bottom: 18px;
+    border-bottom: 1px solid rgba(192, 183, 232, 0.33);
+}
+.serviceContent p{
+    font-weight: 100;
+    margin-top: 22px;
+    margin-bottom: 35px;
+    line-height: 25px;
+    font-size: 12px;
+}

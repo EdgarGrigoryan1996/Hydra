@@ -1,0 +1,73 @@
+.contact{
+    position: relative;
+    width: 100%;
+    background-color: #343045;
+    z-index: 999;
+}
+.contactBlock{
+    width: 100%;
+    padding: 90px 107px;
+    background: radial-gradient(50% 50% at 50% 50%, #403A5F 0%, #211E2E 100%);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 100px;
+}
+.formTitle{
+    text-align: center;
+    font-size: 36px;
+    color: white;
+}
+.formTitle h2{
+    padding-bottom: 30px;
+}
+.border{
+    width: 40%;
+    height: 1px;
+    background: rgb(176,176,179);
+    background: linear-gradient(90deg, rgba(176,176,179,1) 100%, rgba(192,183,232,1) 100%, rgba(129,118,175,1) 100%);
+    margin: 0 auto;
+}
+.formTitle h3{
+    margin-top: 21px;
+    font-weight: 300;
+}
+
+/* Form */
+
+.form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 65px;
+}
+.form input,.form textarea{
+    padding: 27px 42px;
+    border-radius: 40px;
+    background: none;
+    border: 2px solid #FFFFFF;
+    color: white;
+    outline: none;
+}
+.form input::placeholder,.form textarea::placeholder{
+    color: white;
+}
+.inputGroup{
+
+}
+.inputGroup div{
+    display: inline;
+
+}
+.inputGroup input{
+    display: inline;
+    width: 49.5%;
+}
+.maxWidth input,.maxWidth textarea{
+    max-width: 100%;
+    width: 100%;
+    resize: none;
+}
+.maxWidth textarea{
+    margin-bottom: 51px;
+}
+.inputGroup,.maxWidth{
+    margin-bottom: 39px;
+}
