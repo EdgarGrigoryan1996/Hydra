@@ -1,8 +1,13 @@
 import React, {useState} from 'react';
 import s from "./Navbar.module.css"
+import g from "../../../global.module.css"
 import logo from "../../../assets/icons/logo.png"
 import logoText from "../../../assets/icons/logoText.png"
 function Navbar(props) {
+    function setDefault(){
+        setMobileMenuOpened(false)
+        setBurgerClose(false)
+    }
     const [mobileMenuOpened,setMobileMenuOpened] = useState(false)
     const [burgerClose,setBurgerClose] = useState(false)
     return (
@@ -11,7 +16,7 @@ function Navbar(props) {
                 <img className={s.logoImg} src={logo} alt="HYDRA"/>
                 <img src={logoText} alt=""/>
             </div>
-            <div className={s.menu}>
+            <div className={mobileMenuOpened ? s.test + " " + s.menu : s.menu}>
                 <div className={burgerClose ? s.burger + " " + s.burgerClose : s.burger} onClick={() => {
                     setMobileMenuOpened(!mobileMenuOpened)
                     setBurgerClose(!burgerClose)
@@ -22,14 +27,14 @@ function Navbar(props) {
                 </div>
                 <ul className={mobileMenuOpened && s.mobileMenu}>
                     <div>
-                        <li><a href="#">ABOUT</a></li>
-                        <li><a href="#">SERVICES</a></li>
-                        <li><a href="#">TECHNOLOGIES</a></li>
-                        <li><a href="#">HOW TO</a></li>
+                        <li onClick={() => {setDefault()}}><a href="#about">ABOUT</a></li>
+                        <li onClick={() => {setDefault()}}><a href="#services">SERVICES</a></li>
+                        <li onClick={() => {setDefault()}}><a href="#technologies">TECHNOLOGIES</a></li>
+                        <li onClick={() => {setDefault()}}><a href="#howto">HOW TO</a></li>
                     </div>
                     <div>
-                        <li className={s.btn + " " + s.contactBtn}><a href="#">CONTACT US</a></li>
-                        <li className={s.btn + " " + s.joinBtn}><a href="#">JOIN HYDRA</a></li>
+                        <li onClick={() => {setDefault()}} className={g.transparentBtn + " " + s.contactBtn}><a href="#contact">CONTACT US</a></li>
+                        <li onClick={() => {setDefault()}} className={g.btn + " " + s.joinBtn}><a href="#join">JOIN HYDRA</a></li>
                     </div>
 
                 </ul>

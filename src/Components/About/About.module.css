@@ -22,6 +22,9 @@
     font-size: 36px;
     font-weight: 100;
 }
+.content{
+
+}
 .content p{
     margin-top: 42px;
     margin-bottom: 28px;
@@ -29,4 +32,20 @@
     font-weight: 300;
     font-size: 16px;
     line-height: 25px;
+}
+
+@media screen  and (max-width: 920px){
+    .about{
+        margin-top: 50px;
+    }
+    .aboutContent{
+        margin-top: 0;
+    }
+    .contentTitle{
+        display: none;
+    }
+    .aboutContent{
+        display: flex;
+        flex-direction: column;
+    }
 }

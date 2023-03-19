@@ -5,13 +5,14 @@ footer{
 .footerBlock{
     position: relative;
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     justify-content: space-between;
     margin-top: 127px;
     color: white;
     padding-bottom: 79px;
     z-index: 111;
 }
+
 .vector{
     width: 105%;
     position: absolute;
@@ -28,9 +29,15 @@ footer{
     height: 1px;
     background: linear-gradient(to right, #343045, #4c4761, #655f7e, #7f799c, #9a93bc, #9a93bc, #9a93bc, #9a93bc, #7f799c, #655f7e, #4c4761, #343045);
 }
+.footerItem {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 24%;
+}
 .footerItem:not(:last-child){
     position: relative;
-    padding-right: 100px;
+    padding-right: 50px;
+    padding-left: 50px;
 }
 .footerItem:not(:last-child):before{
     content: "";
@@ -70,4 +77,64 @@ footer{
     font-size: 14px;
     color:#fff;
     letter-spacing: 5px;
+}
+@media screen  and (max-width: 1280px){
+    .footerItem{
+        flex-basis: 50%;
+    }
+    .footerItem:nth-child(5),.footerItem:nth-child(4){
+        margin-top: 50px;
+    }
+    .footerItem:nth-child(3){
+        display: flex;
+        justify-content: center;
+    }
+    .footerItem:nth-child(5){
+        position: relative;
+        order: 4;
+    }
+    .footerItem:nth-child(4){
+        order: 5;
+        display: flex;
+        justify-content: center;
+    }
+    .footerBlock .footerItem:nth-child(5)::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 6px;
+        height: 100%;
+        background: linear-gradient(to bottom, #343045, #4c4761, #655f7e, #7f799c, #9a93bc, #9a93bc, #9a93bc, #9a93bc, #7f799c, #655f7e, #4c4761, #343045);
+    }
+}
+
+@media screen and (max-width: 920px){
+    .buildBtn{
+        width: 90%;
+    }
+}
+@media screen and (max-width: 800px){
+    .footerBlock{
+        margin-top: 81px;
+    }
+    .footerItem{
+        flex-basis: 100%;
+        text-align: center;
+    }
+    .footerBlock .footerItem::before,.footerBlock .footerItem:nth-child(5)::before{
+        width: 0;
+    }
+    .social{
+        justify-content: center;
+    }
+    .footerItem:nth-child(3),.footerItem:nth-child(4){
+        display: none;
+    }
+    .buildBtn{
+        width: 100%;
+    }
+    .copyright{
+        font-size: 14px;
+    }
 }

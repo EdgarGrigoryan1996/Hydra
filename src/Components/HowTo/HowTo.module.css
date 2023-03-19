@@ -5,9 +5,10 @@
 }
 
 .howToItems{
+    position: relative;
     margin-top: 119px;
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     justify-content: space-between;
     background-image: url("../../assets/images/vector4.png");
     background-repeat: no-repeat;
@@ -17,6 +18,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 24%;
 }
 .wrapper{
     width: 198px;
@@ -49,4 +53,58 @@
 }
 .itemTitleBlock img{
     margin-right: 15px;
+}
+.prev,.next{
+    display: none;
+}
+
+@media screen and (max-width: 1499px){
+
+    .itemBlock{
+        flex-basis: 48%;
+    }
+    .service:nth-child(3),.service:nth-child(4){
+        margin-top: 50px;
+    }
+    .service p{
+        text-align: center;
+    }
+    .howToItems{
+        background: none;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .itemTitleBlock img{
+        display: none;
+    }
+    .itemBlock{
+        margin: 0 auto;
+        flex-basis: 85%;
+        display: none;
+    }
+    .itemBlock h3{
+        font-size: 24px;
+    }
+    .active{
+        display: flex;
+    }
+    .prev,.next{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        border-radius: 50%;
+        background: rgba(14, 14, 14, 0.32);
+        cursor: pointer;
+    }
+    .prev{
+        left: 0;
+        bottom: 125px;
+    }
+    .next{
+        right: 0;
+        bottom: 125px;
+    }
 }

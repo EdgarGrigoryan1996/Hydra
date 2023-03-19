@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import s from "./Services.module.css"
 import g from "../../global.module.css"
 import bigArrow from "../../assets/icons/bigArrow.png";
@@ -7,7 +7,24 @@ import educationImg from "../../assets/images/education.png"
 import selfCareImg from "../../assets/images/salfCare.png"
 import outdoorImg from "../../assets/images/outdoor.png"
 import vector from "../../assets/images/vector3.png"
+import prev from "../../assets/icons/prev2.png";
+import next from "../../assets/icons/next2.png";
 function Services(props) {
+    function nextSlide(currentSlide){
+        if(currentSlide === 4){
+            setActiveSlide(1)
+        } else {
+            setActiveSlide(activeSlide + 1)
+        }
+    }
+    function prevSlide(currentSlide){
+        if(currentSlide === 1){
+            setActiveSlide(4)
+        } else {
+            setActiveSlide(activeSlide - 1)
+        }
+    }
+    const [activeSlide,setActiveSlide] = useState(1)
     const services = [
         {
             img:simulationImg,
@@ -31,7 +48,7 @@ function Services(props) {
         }
     ]
     return (
-        <div className={s.services}>
+        <div id={"services"} className={s.services}>
             <img className={s.vector} src={vector} alt=""/>
             <div className={g.sectionTitle}>
                 <div className={g.title}>
@@ -50,9 +67,12 @@ function Services(props) {
                 </div>
             </div>
             <div className={s.servicesBlock}>
-                {services.map((service) => {
+
+
+                {services.map((service,i) => {
                     return (
-                        <div className={s.service}>
+                        <div className={s.service + " " + (activeSlide === i + 1 ? s.active : "") }>
+                            <div className={s.prev} onClick={() => {prevSlide(activeSlide)}}><button className={s.prevBtn}><img src={prev} alt=""/> </button></div>
                             <div className={s.serviceImg}>
                                 <img src={service.img} alt="Simulation"/>
                             </div>
@@ -62,7 +82,8 @@ function Services(props) {
                             <div className={s.serviceContent}>
                                 <p>{service.content}</p>
                             </div>
-                            <div><button className={g.btn}>TRY IT NOW</button></div>
+                            <button className={g.btn}>TRY IT NOW</button>
+                            <div className={s.next} onClick={() => {nextSlide(activeSlide)}}><button className={s.nextBtn}><img src={next} alt=""/> </button></div>
                         </div>
                     )
                 })}

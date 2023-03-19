@@ -11,7 +11,7 @@ import pinterest from "../../assets/icons/pinterest.png"
 import vector from "../../assets/images/vector5.png"
 function Footer(props) {
     return (
-        <footer>
+        <footer id={"contact"}>
             <div className={s.footerBlock}>
                 <img className={s.vector} src={vector} alt=""/>
                 <div className={s.footerItem}>
@@ -46,8 +46,9 @@ function Footer(props) {
                             <li><img src={instagram} alt=""/></li>
                             <li><img src={pinterest} alt=""/></li>
                         </ul>
+                        <div className={s.buildBtn}><button className={g.btn}>BUILD YOUR WORLD</button></div>
                     </div>
-                    <div><button className={g.btn}>BUILD YOUR WORLD</button></div>
+
                 </div>
             </div>
             <div className={s.copyright}>

@@ -4,6 +4,10 @@
   box-sizing: border-box;
   font-family: "Montserrat";
   font-style: normal;
+  scroll-behavior: smooth;
+}
+img{
+  max-width: 100%;
 }
 .mr10{
   margin-right: 10px;
@@ -17,6 +21,8 @@
   background-color: #343045;
 }
 .btn{
+  position: relative;
+  z-index: 9000;
   font-weight: 700;
   font-size: 12px;
   padding: 17px 38px;
@@ -24,32 +30,59 @@
   border-radius: 40px;
   cursor: pointer;
   background: linear-gradient(90deg, #8176AF 0%, #C0B7E8 100%);
+  transition: all 0.2s linear;
+}
+.btn:hover{
+  background: linear-gradient(45deg, #8176AF 100%, #C0B7E8 0%) !important;
+}
+.transparentBtn{
+  font-size: 12px;
+  padding: 17px 38px;
+  border:2px solid #fff;
+  border-radius: 40px;
+  z-index: 9000;
 }
 /* Section Title */
 
 .sectionTitle{
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   color:#fff;
 }
 .title {
-  font-size: 36px;
+  width: 40%;
 }
 .title h2{
+  font-size: 36px;
   font-weight: 900;
 }
 .title h3 {
+  font-size: 36px;
   font-weight: 300;
   margin-right: 30px;
+  white-space: nowrap;
+}
+.sectionTitle div{
+  width: 50%;
 }
 .sectionTitle p{
-  margin-left: auto;
-  width: 75%;
+  width: 100%;
   font-weight: 400;
   line-height: 25px;
 }
 .arrowBlock{
   display: flex;
+  align-items: center;
+}
+.nextBtn,.prevBtn{
+  background: linear-gradient(267.61deg, #C0B7E8 -0.6%, #8176AF 98.31%);;
+  border: none;
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
 
@@ -67,9 +100,78 @@
   .wrapper{
     padding: 50px 84px;
   }
+  .arrowBlock{
+    max-width: 100%;
+  }
+  .arrowBlock img{
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1300px){
+  .arrowBlock img{
+    width: 70%;
+  }
+}
+@media screen and (max-width: 1200px){
+  .arrowBlock img{
+    width: 60%;
+  }
+}
+@media screen  and (max-width: 1180px){
+  .sectionTitle p{
+    font-size: 14px;
+  }
+  .arrowBlock img{
+    width: 50%;
+  }
+}
+@media screen and (max-width: 1110px){
+  .arrowBlock img{
+    width: 40%;
+  }
 }
 @media screen and (max-width: 1010px){
   .wrapper{
     padding: 50px 40px;
+  }
+}
+@media screen and (max-width: 950px){
+  .arrowBlock img{
+    width: 35%;
+  }
+}
+@media screen and (max-width: 920px){
+  .content{
+    display: none;
+  }
+  .sectionTitle p{
+    display: none;
+  }
+  .sectionTitle div{
+    width: unset;
+  }
+  .title div{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sectionTitle .title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 36px;
+  }
+  .title h2{
+    font-size: 46px;
+  }
+
+  .sectionTitle img{
+    display: none;
+  }
+  .btn, .transparentBtn{
+    width: 100%;
+    text-align: center;
+    padding: 10px 15px;
   }
 }

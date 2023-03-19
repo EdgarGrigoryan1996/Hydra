@@ -3,7 +3,7 @@ import s from "./Contact.module.css"
 import g from "../../global.module.css"
 function Contact(props) {
     return (
-        <div className={s.contact}>
+        <div id={"join"} className={s.contact}>
             <div className={s.contactBlock}>
                 <div className={s.formTitle}>
                     <h2>JOIN HYDRA</h2>

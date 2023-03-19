@@ -61,21 +61,24 @@ nav{
     text-decoration: none;
     font-weight: 700;
 }
-.btn{
-    font-size: 12px;
-    padding: 17px 38px;
-    border:2px solid #fff;
-    border-radius: 40px;
-}
+
 .contactBtn{
     margin-left: 100px;
     cursor: pointer;
     background: #343045;
 }
+.menu ul li.contactBtn:hover{
+    border-color: #9a93bc;
+    color:#9a93bc;
+}
+.menu ul li.contactBtn:hover > a{
+    color: #9a93bc;
+}
 .joinBtn{
     cursor: pointer;
     background: linear-gradient(90deg, #8176AF 0%, #C0B7E8 100%);
     border: none;
+
 }
 .menu ul li.joinBtn a{
     color: #343045;
@@ -121,6 +124,9 @@ nav{
 @media screen and (max-width: 920px){
     .burgerClose{
         margin-right: 280px;
+        position: fixed;
+        right: 25px;
+        top: 50px;
     }
     .burgerClose span:nth-child(2){
         opacity: 0;
@@ -133,13 +139,14 @@ nav{
     }
     .menu ul{
         position: fixed;
-        background: linear-gradient(90deg, #29204f -15.79%, #21145a 100%);
+        background: linear-gradient(90deg, #a262d1 0%, #fd6a6b 100%);
         flex-direction: column;
         justify-content: flex-start;
         top: 0;
         right: -300px;
         width: 300px;
         height: 100%;
+        z-index: 9997;
     }
     .menu ul.mobileMenu{
         right: 0;
@@ -152,6 +159,30 @@ nav{
     }
     .burger{
         display: block;
+        height: 100%;
+    }
+}
+@media screen  and (max-width: 700px){
+    .test{
+        position: static;
+    }
+    .burgerClose{
+        position: fixed;
+        z-index: 9999;
+        left: 25px;
+        bottom: 0;
+    }
+    .menu ul{
+        top: 0;
+        right: 0;
+        width: 0;
+        height: 100%;
+        opacity: 0;
+        justify-content: center;
+    }
+    .menu .mobileMenu{
+        width: 100%;
+        opacity: 1;
     }
 
 }

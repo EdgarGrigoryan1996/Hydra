@@ -5,17 +5,20 @@ import bigArrow from "../../assets/icons/bigArrow.png"
 import aboutImg from "../../assets/images/aboutImg.png"
 function About(props) {
     return (
-        <div className={s.about}>
+        <div id={"about"} className={s.about}>
             <div className={g.sectionTitle}>
                 <div className={g.title}>
-                    <h2>INTRODUTION</h2>
-                    <div className={g.arrowBlock}>
-                        <h3>TO HYDRA VR</h3>
-                        <img src={bigArrow} alt="BigArrow"/>
+                    <div>
+                        <h2>INTRODUTION</h2>
+                        <div className={g.arrowBlock}>
+                            <h3>TO HYDRA VR</h3>
+                            <img src={bigArrow} alt="BigArrow"/>
+                        </div>
                     </div>
 
+
                 </div>
-                <div>
+                <div className={g.content}>
                     <p>Vitae sapien pellentesque habitant morbi tristique senectus et netus et. Feugiat
                         nibh sed pulvinar proin gravida hendrerit lectus. Mi sit amet mauris commodo
                         quis imperdiet massa tincidunt nunc. Viverra aliquet eget sit amet tellus. Ornare

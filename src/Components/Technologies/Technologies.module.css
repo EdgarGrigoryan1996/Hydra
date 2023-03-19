@@ -43,9 +43,103 @@
 }
 
 .technologiesItems{
+    position: relative;
     margin-top: 99px;
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
+}
+.technologiesItems div{
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 24%;
+}
+
+.prev,.next{
+    display: none;
+}
+
+@media screen and (max-width: 1499px){
+
+    .technologiesItems div{
+        flex-basis: 48%;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 1320px){
+    .titleBackground{
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 1080px){
+    .titleBackground{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 800px){
+    .titleBackground{
+        margin-top: -50px;
+        font-size: 16px;
+        height: 163px;
+        border-radius: 50px;
+        background-size: cover;
+    }
+    .titleBackground h3{
+        padding-top: 30px;
+        font-size: 24px;
+        font-weight: 300;
+    }
+    .arrow{
+        display: none;
+    }
+    .technologiesItems{
+        margin-top: 25px;
+    }
+    .technologiesItems div{
+        flex-basis: 100%;
+        text-align: center;
+    }
+    .technologiesItems div{
+        display: none;
+    }
+    .technologiesItems .active{
+        display: flex;
+        justify-content: center;
+    }
+    .technologiesItems .prev,.technologiesItems .next{
+        position: absolute;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        border-radius: 50%;
+        background: rgba(14, 14, 14, 0.32);
+        cursor: pointer;
+    }
+    .technologiesItems .prev{
+        left: 0;
+        display: block;
+    }
+    .technologiesItems .next{
+        right: 0;
+        display: block;
+    }
+    .nextBtn,.prevBtn{
+        background: linear-gradient(267.61deg, #C0B7E8 -0.6%, #8176AF 98.31%);;
+        border: none;
+        color: #fff;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .technologiesItems .item img{
+        width: 50%;
+        height: 50%;
+    }
+
 }
